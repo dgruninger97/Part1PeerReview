@@ -15,17 +15,27 @@
 ### To what extent did the peer’s design function?
 
 It functioned, but required a decent amount of change on my end to get it to work. There were a couple issues that would have caused compile errors; the
-interface had fields in it and there needed to be a function passed into the integrationMethod(). Additionally, there was no main method, so I was confused
+interface had fields in it and there needed to be parameters passed into the integrationMethod(). Additionally, there was no main method, so I was confused
 on where the program would actually start. Lastely, there were no actual implementations of the IntegrationMethod interface. These were all minor issues that
-I was able to fix, but it did require a fair amount of code to be redesigned or changed.
+I was able to fix, but it did require a fair amount of code to be changed from the initial class diagram.
 
 ### To what extent did the design favor composition over inheritance?
 
-This design did a decent job favoring composition over inheritance. It uses an IntegrationMethod interface which is implemented by a NumericalIntegration
-class. I assume that the author intends for there to be multiple instances of classes which implement IntegrationMethod and make use of encapsulating the family
-of NumericalIntegration algorithms; however it is not shown in the class diagram.
+The initial design didn't favor composition over inheritance for a simple reason; there were no actual implementations of the IntegrationMethod class. If there
+were implementations of IntegrationMethod, then it would have favored composition over inheritance.
 
 ### To what extent did the design program to interfaces?
 
-As mentioned above, the IntegrationMethod interface was implemented by the NumericalIntegraiton class, which I assume will actually execute the integration desired
-by the client.
+The design did a good job programming to interfaces. It used the IntegrationMethod interface to hold the integrate() method, and the NumericalIntegration class
+had a reference to that interface. One small issue was that the design gave the interface some fields, which is wrong, so I removed them.
+
+### To what extent was the design loosely coupled? Were there any trainwrecks?
+
+This question is somewhat difficult to answer, because there are really only two classes in the class diagram that mattered to actually calculate
+integration. So in terms of those two classes, yes the are loosely coupled and there were no trainwrecks. There was only one association between NumericalIntegration and IntegrationMethod.
+But again, keep in mind that only two of the seven classes shown in the class diagram actually had to do with calculating integrals.
+
+### To what extent was the design cohesive? Did it violate Single Responsibility Principle anywhere?
+
+The design was very cohesive. Both the NumericIntegration class and the IntegrationMethod class have **only one reason to change.** They both carry out one
+responsibility and 
