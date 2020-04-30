@@ -39,3 +39,8 @@ But again, keep in mind that only two of the seven classes shown in the class di
 
 The design was very cohesive. Both the NumericIntegration class and the IntegrationMethod class have **only one reason to change.** They both carry out one
 responsibility and 
+
+### Was there anything that your peer’s design/notebook lacked that would have made life easier for you?
+
+Yes. I don't think it was necessary to include the classes that were not related to the actual numeric integration. Additionally, there should not have been
+fields inside of the interface class.
