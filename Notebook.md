@@ -14,10 +14,10 @@
 
 ### To what extent did the peer’s design function?
 
-It did not function. Not only were there classes that did nothing in the class diagram but had methods in the sequence diagram, there were cases where
-classes had really no purposed but were passed around sort of like a black box for what to do. This left me very confused and I was not able to reasonably
-implement the design based off of what I was given. Additionally, there were cases where association arrows and implementation arrows were mixed, making the
-design more confusing overall.
+It functioned, but required a decent amount of change on my end to get it to work. There were a couple issues that would have caused compile errors; the
+interface had fields in it and there needed to be a function passed into the integrationMethod(). Additionally, there was no main method, so I was confused
+on where the program would actually start. Lastely, there were no actual implementations of the IntegrationMethod interface. These were all minor issues that
+I was able to fix, but it did require a fair amount of code to be redesigned or changed.
 
 ### To what extent did the design favor composition over inheritance?
 
@@ -26,3 +26,6 @@ class. I assume that the author intends for there to be multiple instances of cl
 of NumericalIntegration algorithms; however it is not shown in the class diagram.
 
 ### To what extent did the design program to interfaces?
+
+As mentioned above, the IntegrationMethod interface was implemented by the NumericalIntegraiton class, which I assume will actually execute the integration desired
+by the client.
