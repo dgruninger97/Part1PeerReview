@@ -66,10 +66,13 @@ so that the integrals are properly calculated.
 #### Pros
 
 This approach will do a very good job of **adding additional responsibilities to an object dynamcially.** Additionally, this design will allows us to add on additional
-functionality to our integration methods in the future.
+functionality to our integration methods in the future. Also, we don't have to change **any existing code** to add on the decorators.
 
 #### Cons
 
+We will have to add additional an additional dependency between the NumericanIntegration class and the actual AreaUnderTheCurveDecorator. Also if this ends up being
+our only additional functionality added to the IntegrationMethod, than this would be an overall design decision, and you could simply override the integrate
+method in another class to do the job with less code. However, it is likely that the design will in fact change in the future.
 
 
 ### Candidate Design 2
