@@ -31,14 +31,14 @@ had a reference to that interface. One small issue was that the design gave the 
 
 ### To what extent was the design loosely coupled? Were there any trainwrecks?
 
-This question is somewhat difficult to answer, because there are really only two classes in the class diagram that mattered to actually calculate
-integration. So in terms of those two classes, yes they are loosely coupled and there were no trainwrecks. There was only one association between NumericalIntegration and IntegrationMethod.
-But again, keep in mind that only two of the seven classes shown in the class diagram actually had to do with calculating integrals.
+Yes, this design is loosely coupled. There are a few dependencies between NumericalIntegrtaion and the actual implementations of the IntegrationMethod interface,
+but this is expected. There are certainly not any unused dependencies or associations between any class or interfaces, and there were no trainwrecks.
 
 ### To what extent was the design cohesive? Did it violate Single Responsibility Principle anywhere?
 
 The design was very cohesive. Both the NumericIntegration class and the IntegrationMethod class have **only one reason to change.** They both carry out one
-responsibility and demonstrated high cohesion.
+responsibility and demonstrated high cohesion. Additionally, each IntegrationMethod implementation had one integrate() method to properly perform it's
+respective integration method.
 
 ### Was there anything that your peer’s design/notebook lacked that would have made life easier for you?
 
@@ -95,3 +95,8 @@ size to accurately get the area under the curve.
 
 I prefer the first design because it is better geared towards actually changing the value returned by the intergration method. We will have a greater flexibility
 on the ability the change what values will be returned by the integrate() method. This also does a better job of adding additional behavior without changing underlying code.
+
+
+### Sketch of Class & Sequence Diagrams
+
+### Citations
