@@ -99,4 +99,18 @@ on the ability the change what values will be returned by the integrate() method
 
 ### Sketch of Class & Sequence Diagrams
 
+#### Class Diagram
+
+![Class Diagram](images/DecoratorClassDiagram.PNG)
+
+#### Sequence Diagram
+
+![Sequence Diagram](images/DecoratorSequenceDiagram.PNG)
+
 ### Citations
+
+https://ramj2ee.blogspot.com/2013/12/decorator-design-pattern-sequence.html
+
+https://www.softwareideas.net/a/391/Decorator-Design-Pattern--UML-Diagrams-
+
+https://www.visual-paradigm.com/tutorials/decoratordesignpattern.jsp
