@@ -43,10 +43,14 @@ responsibility and demonstrated high cohesion.
 ### Was there anything that your peer’s design/notebook lacked that would have made life easier for you?
 
 Yes. I don't think it was necessary to include the classes that were not related to the actual Numeric Integration layer of the architecture. Additionally,
-there should not have been fields inside of the interface class. Finally, it would have been easier to understand if there was at least one concrete implementation
+there should not have been fields inside of the interface. Finally, it would have been easier to understand if there was at least one concrete implementation
 of the IntegrationMethod.
 
 ### In retrospect: was there anything that your notebook was lacking that would have made life easier for someone else?
 
 Yes. I probably should have noted that my ConcreteImplentations of the IntegrationMethod were not actually going to be the real concrete implementations, they were
 just there to be placeholders.
+
+### Time Spent - 3 hours (includes implementing the actual design)
+
+# Part 2 Decorator
