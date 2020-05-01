@@ -54,3 +54,26 @@ just there to be placeholders.
 ### Time Spent - 3 hours (includes implementing the actual design)
 
 # Part 2 Decorator
+
+## Date -- 4/30/2020
+
+### Candidate Design 1
+
+For my first candidate design, I propose that we give the IntegrationMethod interface an abstract decorator called **IntegrationDecorator**. That abstrct decorator will have
+one concrete Decorator implementation, called AreaUnderTheCurveDecorator. In the AreaUnderTheCurverDecorator's integrate method, it will call Math.abs(integrate()),
+so that the integrals are properly calculated.
+
+#### Pros
+
+This approach will do a very good job of **adding additional responsibilities to an object dynamcially.** Additionally, this design will allows us to add on additional
+functionality to our integration methods in the future.
+
+#### Cons
+
+
+
+### Candidate Design 2
+
+#### Pros
+
+#### Cons
