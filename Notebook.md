@@ -32,13 +32,13 @@ had a reference to that interface. One small issue was that the design gave the 
 ### To what extent was the design loosely coupled? Were there any trainwrecks?
 
 This question is somewhat difficult to answer, because there are really only two classes in the class diagram that mattered to actually calculate
-integration. So in terms of those two classes, yes the are loosely coupled and there were no trainwrecks. There was only one association between NumericalIntegration and IntegrationMethod.
+integration. So in terms of those two classes, yes they are loosely coupled and there were no trainwrecks. There was only one association between NumericalIntegration and IntegrationMethod.
 But again, keep in mind that only two of the seven classes shown in the class diagram actually had to do with calculating integrals.
 
 ### To what extent was the design cohesive? Did it violate Single Responsibility Principle anywhere?
 
 The design was very cohesive. Both the NumericIntegration class and the IntegrationMethod class have **only one reason to change.** They both carry out one
-responsibility and 
+responsibility and demonstrated high cohesion.
 
 ### Was there anything that your peer’s design/notebook lacked that would have made life easier for you?
 
@@ -48,5 +48,5 @@ of the IntegrationMethod.
 
 ### In retrospect: was there anything that your notebook was lacking that would have made life easier for someone else?
 
-Yes. I probably should have noted that my ConcreteImplentations of the IntegrationMethod were not actually going to be the concrete implementations, they were
+Yes. I probably should have noted that my ConcreteImplentations of the IntegrationMethod were not actually going to be the real concrete implementations, they were
 just there to be placeholders.
