@@ -87,4 +87,11 @@ This approach also does a good job of **adding additional responsibilities to an
 
 #### Cons
 
-Again, this adds additional dependencies into our system. However a larger con is that this does not favor 
+Again, this adds additional dependencies into our system. However a larger con is that this does not end up changing the functionality of the integrate() method.
+Instead, it more focuses on **changing the bounds of integration**. This would make it much more difficult for the client to properly set the bounds and step
+size to accurately get the area under the curve.
+
+### Preference
+
+I prefer the first design because it is better geared towards actually changing the value returned by the intergration method. We will have a greater flexibility
+on the ability the change what values will be returned by the integrate() method. This also does a better job of adding additional behavior without changing underlying code.
