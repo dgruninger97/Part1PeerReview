@@ -77,6 +77,14 @@ method in another class to do the job with less code. However, it is likely that
 
 ### Candidate Design 2
 
+For the second candidate design, we could give the NumericalIntegration class a decorator. Specifically, we could decorate the doIntegration() method so that
+it would add the absolute value to each integration step.
+
 #### Pros
+The pros to this approach are almost identical to the pros for the Candidate Design 1. The only different pro is that this approach will be able add
+is the fact that we are going to decorate the doIntegrate() method instead of the integrate() method inside of the IntegrationMethod interface.
+This approach also does a good job of **adding additional responsibilities to an object dynamcially.** We also won't have to **change any existing code.**
 
 #### Cons
+
+Again, this adds additional dependencies into our system. However a larger con is that this does not favor 
